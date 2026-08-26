@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ending-container">
+    <div class="ending-content">
+        <h2 class="ending-title">{{ ending.title }}</h2>
+
+        <div class="ending-text">
+            <p>{{ ending.text }}</p>
+        </div>
+
+        <div class="final-stats">
+            <h3>Your Final Echo</h3>
+
+            <div class="stats-grid">
+                <div class="final-stat">
+                    <span class="stat-name">Courage</span>
+                    <span class="stat-number courage">{{ stats.courage }}</span>
+                </div>
+
+                <div class="final-stat">
+                    <span class="stat-name">Creativity</span>
+                    <span class="stat-number creativity">{{ stats.creativity }}</span>
+                </div>
+
+                <div class="final-stat">
+                    <span class="stat-name">Risk</span>
+                    <span class="stat-number risk">{{ stats.risk }}</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary btn-large" id="restartBtn">Play Again</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('restartBtn').addEventListener('click', async function() {
+        const result = await makeRequest('/restart', 'POST');
+        if (result.success) {
+            navigateTo(result.redirect);
+        }
+    });
+</script>
+{% endblock %}en

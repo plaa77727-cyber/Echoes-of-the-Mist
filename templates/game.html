@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="game-container">
+    <div class="game-header">
+        <h2 id="eventTitle" class="event-title">{{ event.title }}</h2>
+    </div>
+
+    <div class="game-content">
+        <div class="story-text">
+            <p>{{ event.text }}</p>
+        </div>
+
+        <div class="choices-container">
+            {% for choice in event.choices %}
+            <button class="btn btn-choice" data-choice="{{ loop.index0 }}">
+                {{ choice.text }}
+            </button>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.btn-choice').forEach(btn => {
+        btn.addEventListener('click', async function() {
+            const choiceIndex = this.getAttribute('data-choice');
+            const result = await makeRequest('/make_choice', 'POST', {
+                choice: parseInt(choiceIndex)
+            });
+
+            if (result.success) {
+                navigateTo(result.redirect);
+            }
+        });
+    });
+</script>
+{% endblock %}
