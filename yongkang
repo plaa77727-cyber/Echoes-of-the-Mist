@@ -1,0 +1,23 @@
+def check_scores(**scores):
+    subjects = {
+        "math": "คณิต",
+        "k_me": "เคมี",
+        "pasathai": "ภาษาไทย"
+    }
+
+    for key, subject in subjects.items():
+        score = scores.get(key)
+        if score is not None and score >= 15:
+            print(f"ผ่าน{subject}จ้า")
+        else:
+            print(f"ไม่ผ่าน{subject}")
+
+try:
+    math_score = int(input("กรอกคะแนนคณิต: "))
+    kme_score = int(input("กรอกคะแนนเคมี: "))
+    thai_score = int(input("กรอกคะแนนภาษาไทย: "))
+
+    check_scores(math=math_score, k_me=kme_score, pasathai=thai_score)
+
+except ValueError:
+    print("กรอกดีๆ หน่อย ต้องเป็นตัวเลขเท่านั้น")
