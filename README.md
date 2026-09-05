@@ -2,7 +2,7 @@ Echo of Choices
 
 ## 🎮 Play the Game
 
-[▶️ Play Meme TCG](https://echoes-of-the-mist.onrender.com/)
+[▶️ Play Echo of Choices](https://echoes-of-the-mist.onrender.com/)
 
 ## ▶️ Run Locally
 1. Clone this repository.
