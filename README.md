@@ -57,7 +57,10 @@ bash
 pip install -r requirements.txt
 python app.py
 
-Then open http://127.0.0.1:5000 in a browser.
+## 🎮 Play the Game
+
+[▶️ Play Meme TCG](https://echoes-of-the-mist.onrender.com/)
+
 
 Player State
 
