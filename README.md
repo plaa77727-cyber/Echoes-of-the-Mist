@@ -1,5 +1,14 @@
 Echo of Choices
 
+## 🎮 Play the Game
+
+[▶️ Play Meme TCG](https://echoes-of-the-mist.onrender.com/)
+
+## ▶️ Run Locally
+1. Clone this repository.
+2. Open the project folder > app.py
+3. Run: python app.py
+   
 Echo of Choices is a browser-based, choice-driven narrative game built with Python (Flask) on the backend and plain HTML/CSS/JavaScript on the frontend. The player reads through a story, makes choices at key moments, and those choices shape three underlying stats (Courage, Creativity, Risk) that determine how the story unfolds.
 
 The project currently ships with a Thai-language horror/mystery story about a family moving to a strange new village, but the entire narrative engine is built to be story-agnostic — the code doesn't know or care what the story is about. This means the same engine can run any branching narrative, in any language, of any length, without touching the underlying application logic.
@@ -57,9 +66,7 @@ bash
 pip install -r requirements.txt
 python app.py
 
-## 🎮 Play the Game
 
-[▶️ Play Meme TCG](https://echoes-of-the-mist.onrender.com/)
 
 
 Player State
