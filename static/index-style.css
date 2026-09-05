@@ -1,1 +1,131 @@
+.horror-start-button {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #080906;
+  cursor: pointer;
+}
+.horror-start-button .vignette-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  mix-blend-mode: multiply;
+}
+.horror-start-button .vignette-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  mix-blend-mode: multiply;
+}
+.horror-start-button .vcr-rec-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.horror-start-button .rec-dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #ff2b2b;
+  border-radius: 6px;
+  filter: blur(0.5px);
+}
+.horror-start-button .rec-text {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Geist Mono-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #e2e5df;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: normal;
+}
+.horror-start-button .vcr-play-status {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-family: "Geist Mono-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #e2e5df;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: normal;
+}
+.horror-start-button .tracking-error {
+  top: 120px;
+  height: 6px;
+  background-color: #ffffff13;
+  filter: blur(1.5px);
+  position: absolute;
+  left: 0;
+  width: 800px;
+}
+.horror-start-button .button-vibration {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  margin: 20px 0;
+  border: 1px solid #9ba293;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Geist Mono-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #e2e5df;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
 
+.horror-start-button .button-vibration:hover {
+  background-color: rgba(226, 229, 223, 0.1);
+  border-color: #e2e5df;
+}
+.horror-start-button .rectangle {
+  position: relative;
+  width: 27px;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+.horror-start-button .vcr-time-info {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+.horror-start-button .vcr-track-indicator {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Geist Mono-Regular", Helvetica;
+  font-weight: 400;
+  color: #9ba293;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  line-height: normal;
+}
+.horror-start-button .vcr-date-indicator {
+  position: relative;
+  width: fit-content;
+  font-family: "Geist Mono-Regular", Helvetica;
+  font-weight: 400;
+  color: #9ba293;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  line-height: normal;
+}
